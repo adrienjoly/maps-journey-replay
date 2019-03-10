@@ -3,9 +3,7 @@ Javascript Library that loads a journey JSON object (coordinates + timestamp) an
 
 ## Demo
 
-[Link to Demo](https://sebastianvirlan.github.io/maps-journey-replay/)
-
-![Maps Journey Replay](https://i.imgur.com/qxDeW48.png)
+![Maps Journey Replay](https://media.giphy.com/media/8mkxZnI14C16CuoXRU/giphy.gif)
 
 ## Journey JSON format
 
