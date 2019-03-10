@@ -138,7 +138,8 @@ var journeyReplay = function(optionsObj) {
             onFrame: function () {},
             onLocation: function () {}
         },
-        gradientGenerator: null
+        gradientGenerator: null,
+        speed: 1
     };
 
     if(optionsObj.fetchMapPoints) {
@@ -156,7 +157,7 @@ var journeyReplay = function(optionsObj) {
     var _mapProvider =  null;
     var MapLocations = null;
 
-    var _speed                  = 100; // 100% is real speed
+    var _speed                  = 100 / optionsObj.speed; // 100 = real speed
     var _timeRemaining          = 0;
     var _currentLocationIndex   = 0;
     var _currentStepDate        = null;
@@ -172,8 +173,10 @@ var journeyReplay = function(optionsObj) {
 
     /* MAP WRAPPERS */
     var _initMap  = function(onMapLoaded) {
+        var mapOptions = Object.assign({}, MapLocations.get(0)); // copy the coordinates of the starting point
+        mapOptions.zoom = optionsObj.zoom;
         _mapProvider = new optionsObj.mapProvider(optionsObj.logger);
-        _mapProvider.initMap(MapLocations.get(0));
+        _mapProvider.initMap(mapOptions);
         _mapProvider.onMapIdle(onMapLoaded);
         _loadMarker(MapLocations.get(0));
     };
