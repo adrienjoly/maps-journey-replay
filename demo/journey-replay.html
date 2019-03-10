@@ -31,7 +31,7 @@
                     return new GradientGenerator({colours: options.speedColours, steps: options.steps}).hex()
                 },
                 fetchMapPoints: {
-                    url: window.location.origin + '/journey.json'
+                    url: window.location.origin + '/journey.json?' + Date.now()
                 },
                 mapProvider   : googleMaps,
                 marker: {
