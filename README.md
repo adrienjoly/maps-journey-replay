@@ -3,7 +3,11 @@ Javascript Library that loads a journey JSON object (coordinates + timestamp) an
 
 ## Demo
 
+Example generated from Google history data of a day at burning man, black rock city:
+
 ![Maps Journey Replay](https://media.giphy.com/media/8mkxZnI14C16CuoXRU/giphy.gif)
+
+It would be nice to include a script to convert GPX to the JSON format used by this repo.
 
 ## Journey JSON format
 
